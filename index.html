@@ -7,6 +7,13 @@
   <title>Document</title>
 </head>
 
+<body>
+  <H1>Service A</H1>
+
+  <button onclick="sendEvent()">send event</button>
+</body>
+
+
 <script>
   window.onload = () => {
     console.log("Service A loaded")
@@ -15,19 +22,12 @@
       origin,
       parent: window.parent,
     })
+  }
 
-    setTimeout(() => {
-      console.log("Posting message")
-      window.postMessage('Hello from iframe!', '*');
-    }, 5000)
+  function sendEvent() {
+    window.parent.postMessage("hello", "*")
   }
 </script>
-
-<body>
-  <H1>Service A</H1>
-
-  <div style="margin-top: 20px;">
-</body>
 
 
 </html>
