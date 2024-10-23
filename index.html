@@ -23,7 +23,10 @@
   })
 
   function sendEvent() {
-    window.parent.postMessage("hello", origin)
+    window.parent.postMessage({
+      type: "LOGIN_SUCCESS",
+      message: "HELLO"
+    }, origin)
   }
 </script>
 
