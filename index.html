@@ -17,6 +17,7 @@
     })
 
     setTimeout(() => {
+      console.log("Posting message")
       window.postMessage('Hello from iframe!', '*');
     }, 5000)
   }
