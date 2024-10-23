@@ -16,7 +16,7 @@
       parent: window.parent,
     })
 
-    window.parent.postMessage('Hello from iframe!', '*');
+    window.postMessage('Hello from iframe!', 'https://service-b-six.vercel.app/');
   }
 </script>
 
