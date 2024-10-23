@@ -11,14 +11,8 @@
   window.onload = () => {
     console.log("Service A loaded")
 
-    setTimeout(() => {
-      window.location.replace("https://service-b-six.vercel.app/hello.html")
-    }, 5000)
-
     console.log({
-      parent: window.parent,
-      location: window.parent.location,
-      localtionB: parent.document.URL
+      parent: document.referrer,
     })
   }
 </script>
