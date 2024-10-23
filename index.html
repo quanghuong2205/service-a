@@ -7,10 +7,23 @@
   <title>Document</title>
 </head>
 
+<script>
+  window.onload = () => {
+    console.log("Service A loaded")
+
+    //
+    const parent = window.parent;
+    console.log({
+      parent,
+    })
+  }
+</script>
+
 <body>
   <H1>Service A</H1>
 
   <div style="margin-top: 20px;">
 </body>
+
 
 </html>
