@@ -15,7 +15,7 @@
       origin
     })
 
-    window.postMessage("hello " + origin, "https://service-b-six.vercel.app")
+    window.parent.postMessage("hello " + origin, "https://service-b-six.vercel.app")
   }
 </script>
 
