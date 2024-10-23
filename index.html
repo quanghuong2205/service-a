@@ -12,10 +12,11 @@
     console.log("Service A loaded")
     const origin = document.referrer;
     console.log({
-      origin
+      origin,
+      parent: window.parent,
     })
 
-    window.parent.postMessage("hello " + origin, "https://service-b-six.vercel.app")
+    window.parent.postMessage("hello " + origin)
   }
 </script>
 
