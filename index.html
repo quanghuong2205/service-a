@@ -10,10 +10,12 @@
 <script>
   window.onload = () => {
     console.log("Service A loaded")
-
+    const origin = document.referrer;
     console.log({
-      parent: document.referrer,
+      origin
     })
+
+    window.postMessage("hello " + origin, origin)
   }
 </script>
 
