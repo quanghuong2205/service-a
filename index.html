@@ -15,14 +15,12 @@
 
 
 <script>
-  window.onload = () => {
-    console.log("Service A loaded")
-    const origin = document.referrer;
-    console.log({
-      origin,
-      parent: window.parent,
-    })
-  }
+  console.log("Service A loaded")
+  const origin = document.referrer;
+  console.log({
+    origin,
+    parent: window.parent,
+  })
 
   function sendEvent() {
     window.parent.postMessage("hello", origin)
