@@ -16,7 +16,9 @@
       parent: window.parent,
     })
 
-    window.postMessage('Hello from iframe!', '*');
+    setTimeout(() => {
+      window.postMessage('Hello from iframe!', '*');
+    }, 5000)
   }
 </script>
 
